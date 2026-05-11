@@ -54,7 +54,7 @@ ff = "0.13"
 group = "0.13"
 tracing = "0.1"
 rand_chacha = "0.3"
-rayon = "1.8"
+rayon = { version = "1.8", optional = true }
 assert_matches = "1.5"
 criterion = "0.3"
 gumdrop = "0.8"
@@ -67,6 +67,7 @@ halo2_debug = { path = "../halo2_debug" }
 getrandom = { version = "0.2", features = ["js"] }
 
 [features]
+parallel = ["rayon"]
 default = ["batch", "bits", "halo2_frontend/default", "halo2_backend/default", "lookup-any-sanity-checks"]
 dev-graph = ["halo2_frontend/dev-graph", "plotters"]
 test-dev-graph = [
