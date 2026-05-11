@@ -67,7 +67,6 @@ halo2_debug = { path = "../halo2_debug" }
 getrandom = { version = "0.2", features = ["js"] }
 
 [features]
-parallel = ["rayon"]
 default = ["batch", "bits", "halo2_frontend/default", "halo2_backend/default", "lookup-any-sanity-checks"]
 dev-graph = ["halo2_frontend/dev-graph", "plotters"]
 test-dev-graph = [
